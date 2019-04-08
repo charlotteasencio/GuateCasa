@@ -1,5 +1,5 @@
 nav {
-    background: rgb(1, 163, 136);
+    background: rgb(95, 148, 248);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@ nav {
         font-size: 20px;
         display: flex;
         justify-content: flex-start;
-        margin-left: 10px;
+        margin-left: 20px;
         &:hover{
             cursor: pointer;
           }
@@ -20,6 +20,7 @@ nav {
         justify-content: flex-end;
         align-items: center;
         list-style: none;
+        margin-right: 20px;
     }
     li {
         font-size: 16px;
