@@ -14,8 +14,8 @@ export class Maps extends Component {
         zoom={14}
         style={mapStyles}
         initialCenter={{
-         lat: 36.099861,
-         lng: -80.244217
+         lat: 14.628434,
+         lng: -90.522713
         }}
       />
     );
