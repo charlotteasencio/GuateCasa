@@ -15,6 +15,9 @@ export default class Navbar extends React.Component {
                     <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>CasaApp</Link>
                 </h4>
                 <ul>
+                <li>
+                        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Inicio</Link>
+                    </li>
                     <li>
                         <Link to="/comprar" style={{ textDecoration: 'none', color: 'white' }}>Comprar</Link>
                     </li>

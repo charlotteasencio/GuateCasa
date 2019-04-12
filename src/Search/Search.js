@@ -24,16 +24,17 @@ export default class Search extends React.Component {
       handleSubmit = (event) => {
         console.log('A city was searched: ' + this.state.value);
         console.log('Selection is: ' + this.state.selectedValue);
-        //if(this.state.selectedValue === 'alquiler') {
-        //    this.props.history.push('/alquiler');
-        //} else {
-        //    this.props.history.push('/comprar')
-        //}
+        // if(this.state.selectedValue === 'alquiler') {
+        //     this.props.history.push('/alquiler');
+        // } else {
+        //     this.props.history.push('/comprar')
+        // }
         event.preventDefault();
       }
 
     render() {
         return (
+
                 <form onSubmit={this.handleSubmit} id='searchBox'>
                     <div id="row1">
                         <input type="text" value={this.state.value} onChange={this.handleChange} name="ciudad"></input>
