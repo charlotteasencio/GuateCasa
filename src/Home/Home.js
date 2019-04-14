@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.scss' 
 import Search from '../Search'
-import Maps from '../Maps/Maps'
+import Container from '../Maps/Maps'
 
 export default class Home extends React.Component {
     render() {
@@ -13,7 +13,7 @@ export default class Home extends React.Component {
                     <Search />
                 </div>
                 <div id="mapsDiv">
-                    <Maps />
+                    <Container />
                 </div>
             </div>
         )
