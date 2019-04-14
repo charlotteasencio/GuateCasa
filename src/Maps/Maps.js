@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
+=======
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import './Maps.scss'
+>>>>>>> 35ad47c5af3243ec52be509b8a8078c91a929089
 
 const mapStyles = {
-  width: '100%',
+  width: '98%',
   height: '90%',
+  left: '1%',
+  top: '2%',
+  background: 'gray'
 };
 
 export class Maps extends Component {
@@ -34,6 +42,7 @@ export class Maps extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <Map
         google={this.props.google}
         zoom={14}
@@ -57,6 +66,17 @@ export class Maps extends Component {
             </div>
       </InfoWindow>
     </Map>
+=======
+        <Map
+          google={this.props.google}
+          zoom={14}
+          style={mapStyles}
+          initialCenter={{
+          lat: 14.628434,
+          lng: -90.522713
+          }}
+        />
+>>>>>>> 35ad47c5af3243ec52be509b8a8078c91a929089
     );
   }
 }
