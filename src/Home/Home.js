@@ -8,7 +8,6 @@ export default class Home extends React.Component {
         return (
             <div id="mainHomePage">
                 <div id='headerHomePage'>
-                    <h1>This is the home page.</h1>
                     <h3>¿En donde quieres vivir?</h3>
                     <Search />
                 </div>
