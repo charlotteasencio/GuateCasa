@@ -1,0 +1,16 @@
+.footer {
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .footer__icons {
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .footer__individualIcons {
+        margin: 0 10px;
+        font-size: 25px;
+    }
+}

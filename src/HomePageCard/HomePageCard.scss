@@ -1,0 +1,18 @@
+.HomePageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px 40px 40px;
+    background: whitesmoke;
+    box-shadow: 5px 5px 10px gainsboro;
+    .HomePageCard__Title {
+        margin: 20px;
+    }
+    .HomePageCard__Image {
+        padding: 20px;
+    }
+    .HomePageCard__Button {
+        margin: 20px;
+    }
+}

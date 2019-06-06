@@ -1,7 +1,8 @@
 import React from 'react'
 import './Home.scss' 
 import Search from '../Search'
-import Maps from '../Maps/Maps'
+import HomePageCard from '../HomePageCard'
+import Footer from '../Footer';
 
 export default class Home extends React.Component {
     render() {
@@ -12,9 +13,12 @@ export default class Home extends React.Component {
                     <h3>¿En donde quieres vivir?</h3>
                     <Search />
                 </div>
-                <div id="mapsDiv">
-                    <Maps />
+                <div className="aboutSection">
+                    <HomePageCard/>
+                    <HomePageCard/>
+                    <HomePageCard/>
                 </div>
+                <Footer/>
             </div>
         )
     }
