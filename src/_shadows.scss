@@ -1,0 +1,9 @@
+/* Set 3 variables w/ different styles */
+$bottom-diffused: 0px 33px 21px -30px rgba(0, 0, 0, 0.3);
+$left-diffused: -13px 0px 21px -10px rgba(0, 0, 0, 0.3);
+$right-diffused: 13px 4px 21px -10px rgba(0, 0, 0, 0.3);
+
+/* Create our super simple mixin */
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+}

@@ -1,11 +1,14 @@
+@import '../shadows';
+
 .HomePageCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px 40px 40px 40px;
-    background: whitesmoke;
-    box-shadow: 5px 5px 10px gainsboro;
+    background: #f7f7f7;
+    @include box-shadow($bottom-diffused);
+    border-radius: 10px;
     .HomePageCard__Title {
         margin: 20px;
     }
