@@ -1,50 +1,46 @@
-import React from 'react'
-import './Search.scss' 
-//import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-//import Comprar from '../Comprar'
-//import Alquiler from '../Alquiler';
+import React, { useState } from "react";
 
-export default class Search extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: '',
-            selectedValue: 'alquiler'
-        };
-      }
+const SearchParams = () => {
+  //location is the current state of location and setLocation is an updater for the event - this is a hook. They all begin with 'use', even custom hooks
+  //use this instead of setState for function components
+  //hooks never go inside of if statements or for loops
+  //hooks keep track of the order that you are calling these things in. They can't be called out of order.
+  const [location, setLocation] = useState("");
+  //can add another hook here for rent or buy
+  const [searchType, setSearchType] = useState("comprar");
 
-      handleChange = (event) => {
-        this.setState({value: event.target.value});
-      }
+  const SearchTypes = ["comprar", "alquiler"];
 
-      handleSelect = (event) => {
-          this.setState({selectedValue: event.target.value})
-      }
+  return (
+    <div>
+      <h1>{location}</h1>
+      <h1>{searchType}</h1>
+      <form>
+        <input
+          id="location"
+          value={location}
+          placeholder="Location"
+          onChange={e => setLocation(e.target.value)}
+        />
+        <select
+          id="searchType"
+          value={searchType}
+          onChange={e => setSearchType(e.target.value)}
+          onBlur={e => setSearchType(e.target.value)}
+        >
+          {/*if you had an array of strings to make options in this list*/}
+          {SearchTypes.map(searchType => (
+            /*key should be something unique to each element (UserID for example on something more complicated) it lets react know when something has changed that needs to be rerendered or if the 
+              order of the list was just changed */
+            <option key={searchType} value={searchType}>
+              {searchType}
+            </option>
+          ))}
+        </select>
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+};
 
-      handleSubmit = (event) => {
-        console.log('A city was searched: ' + this.state.value);
-        console.log('Selection is: ' + this.state.selectedValue);
-        // if(this.state.selectedValue === 'alquiler') {
-        //     this.props.history.push('/alquiler');
-        // } else {
-        //     this.props.history.push('/comprar')
-        // }
-        event.preventDefault();
-      }
-
-    render() {
-        return (
-
-                <form onSubmit={this.handleSubmit} id='searchBox'>
-                    <div id="row1">
-                        <input type="text" value={this.state.value} onChange={this.handleChange} name="ciudad"></input>
-                        <select value={this.state.selectedValue} onChange={this.handleSelect}>
-                            <option value="alquiler">Alquiler</option>
-                            <option value="comprar">Comprar</option>
-                        </select>
-                    </div>
-                   <button type="submit">Search</button>
-                </form>
-        )
-    }
-}
+export default SearchParams;
