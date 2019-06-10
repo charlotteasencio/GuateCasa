@@ -1,4 +1,5 @@
 @import "../buttons";
+@import "../colors";
 
 .locationSearchForm {
   display: flex;
@@ -7,7 +8,7 @@
 }
 .locationSearchForm__button {
   margin-top: 20px;
-  @include btns($orange, $darkgray);
+  @include btns($darkgray, $white);
 }
 .locationSearch {
   display: flex;

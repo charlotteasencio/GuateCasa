@@ -1,5 +1,9 @@
 $orange: rgb(255, 165, 81);
-$teal: rgb(30, 168, 150);
+$teal: rgb(0, 192, 166);
+$lightteal: rgb(133, 207, 197);
 $darkgray: rgb(54, 54, 54);
 $white: rgb(255, 255, 255);
 $coral: rgb(255, 113, 91);
+
+$linearGradientOrangeCoral: linear-gradient(to bottom right, $coral, $orange);
+$linearGradientTeal: linear-gradient(to right, $teal, $lightteal);

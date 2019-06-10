@@ -1,5 +1,6 @@
 @import "../shadows";
 @import "../buttons";
+@import "../colors";
 
 .HomePageCard {
   display: flex;
@@ -7,7 +8,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px 40px 40px 40px;
-  background: rgb(255, 255, 255);
+  background: rgb(250, 250, 250);
   @include box-shadow($bottom-diffused);
   .HomePageCard__Title {
     width: 100%;
@@ -16,6 +17,7 @@
     margin: 0;
     border-radius: 10% 0% 75% 65% / 0% 69% 94% 59%;
     padding: 30px 0px;
+    background: $linearGradientOrangeCoral;
   }
   .HomePageCard__Image {
     padding: 20px;

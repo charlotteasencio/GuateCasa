@@ -1,5 +1,7 @@
+@import "../colors";
+
 nav {
-  background: rgb(30, 168, 150);
+  background: $linearGradientTeal;
   color: white;
   display: flex;
   position: sticky;
