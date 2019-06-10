@@ -1,13 +1,29 @@
-#searchBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@import "../buttons";
 
-    input {
-        margin-right: 10px;
-    }
-    button {
-        margin-top: 20px;
-    }
+.locationSearchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.locationSearchForm__button {
+  margin-top: 20px;
+  @include btns($orange, $darkgray);
+}
+.locationSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .locationSearch__Input {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  .locationSearch__Select {
+    border: 1px solid #aaa;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  }
 }

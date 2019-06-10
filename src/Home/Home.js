@@ -15,9 +15,21 @@ export default class Home extends React.Component {
           <Search />
         </div>
         <div className="aboutSection">
-          <HomePageCard title="Rent" buttonExample="Rent" />
-          <HomePageCard title="Buy" buttonExample="Buy" />
-          <HomePageCard title="Sell" buttonExample="Sell" />
+          <HomePageCard
+            title="Compra"
+            buttonExample="Compra"
+            color="rgb(255, 165, 81)"
+          />
+          <HomePageCard
+            title="Alquila"
+            buttonExample="Alquila"
+            color="rgb(255, 165, 81)"
+          />
+          <HomePageCard
+            title="Venda"
+            buttonExample="Venda"
+            color="rgb(255, 165, 81)"
+          />
         </div>
         <Footer />
       </div>
