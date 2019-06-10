@@ -4,7 +4,7 @@ import "./Maps.scss";
 
 const mapStyles = {
   width: "70%",
-  height: "95%",
+  height: "calc(100vh - 80px)",
   background: "gray"
 };
 

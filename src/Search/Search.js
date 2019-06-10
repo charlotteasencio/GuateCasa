@@ -38,7 +38,7 @@ const SearchParams = () => {
             ))}
           </select>
         </div>
-        <button className="locationSearchForm__button">Submit</button>
+        <button className="locationSearchForm__button">Vamos</button>
       </form>
     </div>
   );
