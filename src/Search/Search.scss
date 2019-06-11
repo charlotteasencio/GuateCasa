@@ -7,7 +7,7 @@
   align-items: center;
 }
 .locationSearchForm__button {
-  margin-top: 20px;
+  margin-top: 25px;
   @include btns($darkgray, $white);
 }
 .locationSearch {
@@ -15,7 +15,8 @@
   justify-content: center;
   align-items: center;
   .locationSearch__Input {
-    margin-right: 20px;
+    width: 60%;
+    margin-right: 15px;
     padding: 10px 15px;
     border: 1px solid #aaa;
     border-radius: 5px;

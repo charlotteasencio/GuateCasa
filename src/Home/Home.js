@@ -10,7 +10,7 @@ export default class Home extends React.Component {
     return (
       <div id="mainHomePage">
         <div id="headerHomePage">
-          <h3>¿En donde quieres vivir?</h3>
+          <h1>¿En donde quieres vivir?</h1>
           {/*<Search />*/}
           <Search />
         </div>

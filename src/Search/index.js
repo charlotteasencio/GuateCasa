@@ -1,3 +1,3 @@
-import Search from './Search.js';
+import Search from "./Search.js";
 
 export default Search;

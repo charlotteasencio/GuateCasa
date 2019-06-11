@@ -1,12 +1,13 @@
-import React from 'react'
-import './Sidebar.scss'
+import React from "react";
+import "./Sidebar.scss";
+import Search from "../Search";
 
 export default class Sidebar extends React.Component {
-    render() {
-        return (
-            <div className="sidebar">
-                <h4 className="sidebar__title">This is the sidebar</h4>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="sidebar">
+        <Search />
+      </div>
+    );
+  }
 }
