@@ -1,29 +1,59 @@
 @import "../shadows";
 @import "../buttons";
 @import "../colors";
+@import "../variables";
 
-.HomePageCard {
+.card {
+  background: white;
+  height: 450px;
+  width: 350px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 40px 40px 40px;
-  background: rgb(250, 250, 250);
-  @include box-shadow($bottom-diffused);
-  .HomePageCard__Title {
-    width: 100%;
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  .card__header {
+    background: $purple;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding: 20px 0;
+    font-family: sans-serif;
+    padding: 10px 0 40px 0;
+  }
+  .card_icon {
+    align-self: center;
+    position: absolute;
+    transform: translateY(50px);
+  }
+  .card_info {
+    padding: 10px;
     text-align: center;
-    top: 0;
-    margin: 0;
-    border-radius: 69% 0% 69% 69% / 0% 69% 69% 69%;
-    padding: 30px 0px;
-    background: $orange;
+    margin-top: 25%;
   }
-  .HomePageCard__Image {
-    padding: 20px;
+  .card_button {
+    margin: 30px 10px;
+    align-self: center;
+    @include btns($burntorange, $white);
+    cursor: pointer;
   }
-  .HomePageCard__Button {
-    margin: 20px;
-    @include btns($darkgray, $white);
+}
+
+@media screen and (max-width: $largetablet-break) and (min-width: $smalltablet-break) {
+  .card {
+    width: 290px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $smalltablet-break) {
+  .card {
+    width: 450px;
+    height: auto;
   }
 }

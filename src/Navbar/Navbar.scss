@@ -1,8 +1,8 @@
 @import "../colors";
 
-nav {
-  background: $teal;
-  color: white;
+.Navbar {
+  background: $purple;
+  color: black;
   display: flex;
   position: sticky;
   top: 0;
@@ -11,7 +11,7 @@ nav {
   link {
     text-decoration: none;
   }
-  h4 {
+  .Navbar__Logo {
     font-size: 20px;
     display: flex;
     justify-content: flex-start;
@@ -27,7 +27,7 @@ nav {
     list-style: none;
     padding-inline-start: 0px;
   }
-  li {
+  .Navbar__Link {
     font-size: 16px;
     margin : {
       right: 10px;

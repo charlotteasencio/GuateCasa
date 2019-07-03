@@ -1,13 +1,13 @@
 import React from "react";
 import "./Comprar.scss";
 import Sidebar from "../Sidebar";
-import MyMapComponent from "../Search/Maps/Maps";
+import MyMapComponent from "../Maps";
 
 export default class Comprar extends React.Component {
   render() {
     return (
       <div className="comprar">
-        <MyMapComponent />
+        <MyMapComponent isMarkerShown />
         <Sidebar />
       </div>
     );

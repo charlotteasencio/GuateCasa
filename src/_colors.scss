@@ -3,7 +3,14 @@ $teal: rgb(0, 192, 166);
 $lightteal: rgb(133, 207, 197);
 $darkgray: rgb(54, 54, 54);
 $white: rgb(255, 255, 255);
-$coral: rgb(255, 113, 91);
+$coral: rgb(235, 73, 48);
+$burntorange: rgb(214, 83, 31);
+$lightburntorange: lighten($burntorange, 10%);
+$darkblue: rgb(1, 0, 89);
+$purple: rgb(82, 67, 123);
+$pink: rgb(255, 122, 138);
+$lightyellow: rgb(252, 245, 148);
+$darkpink: darken($pink, 10%);
 
 $linearGradientOrangeCoral: linear-gradient(to bottom right, $coral, $orange);
 $linearGradientTeal: linear-gradient(to right, $teal, $lightteal);

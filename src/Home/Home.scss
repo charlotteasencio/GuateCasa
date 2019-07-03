@@ -1,15 +1,19 @@
-#headerHomePage {
+@import "../colors.scss";
+
+.homepage__header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 500px;
+  color: rgb(38, 38, 38);
+  font-family: sans-serif;
 }
 
-.aboutSection {
+.homepage__about {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   margin: 20px 0 50px 0;
