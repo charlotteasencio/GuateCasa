@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
         <nav className="Navbar">
           <h4 className="Navbar__Logo">
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              CasaApp
+              Guate Casa
             </Link>
           </h4>
           <ul>
