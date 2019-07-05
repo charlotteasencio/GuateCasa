@@ -2,6 +2,7 @@
 @import "../buttons";
 @import "../colors";
 @import "../variables";
+@import "../layers";
 
 .card {
   background: white;
@@ -30,6 +31,7 @@
     align-self: center;
     position: absolute;
     transform: translateY(50px);
+    z-index: $middle;
   }
   .card_info {
     padding: 10px;
