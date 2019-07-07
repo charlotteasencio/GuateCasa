@@ -2,6 +2,7 @@
   "name": "guate-casa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://charlotteasencio.github.io/guateCasa",
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "node-sass": "^4.11.0",
