@@ -37,6 +37,13 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return Casa.find({})
             }
+        },
+        cityCasa: {
+            type: new GraphQLList(CasaType),
+            args: {city: {type: GraphQLString}},
+            resolve(parent, args) {
+                return Casa.find({city: args.city})
+            }
         }
     }
 })
