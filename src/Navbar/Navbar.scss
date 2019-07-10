@@ -40,3 +40,27 @@
     }
   }
 }
+
+.NavbarSmall {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .NavbarSmall {
+    background: $purple;
+    color: black;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: $top;
+    ul {
+      list-style: none;
+    }
+  }
+
+  .Navbar {
+    display: none;
+  }
+}
