@@ -26,122 +26,72 @@ export default class Navbar extends React.Component {
   };
 
   render() {
-    const collapseState = this.state.collapsed ? "collapse" : "collapse show";
+    const collapseState = this.state.collapsed ? "collapse" : "collapseShow";
 
     return (
       <Router>
         <nav className="Navbar">
           <h4 className="Navbar__Logo">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              Guate Casa
-            </Link>
+            <Link to="/">Guate Casa</Link>
           </h4>
-          <ul>
+          <ul className="Navbar__Links">
             <li className="Navbar__Link">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                Inicio
-              </Link>
+              <Link to="/">Inicio</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/comprar"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Comprar
-              </Link>
+              <Link to="/comprar">Comprar</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/alquiler"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Alquiler
-              </Link>
+              <Link to="/alquiler">Alquiler</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/vender"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Vender
-              </Link>
+              <Link to="/vender">Vender</Link>
             </li>
           </ul>
         </nav>
 
         <nav className="NavbarSmall">
           <h4 className="Navbar__Logo">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              Guate Casa
-            </Link>
+            <Link to="/">Guate Casa</Link>
           </h4>
-          <div className="navRight">
-            <div
-              id="menuButton"
-              onClick={this.handleOpen}
-              data-style="font-size: 140px"
-              toggle={collapseState}
-              data-target="#navLinks"
-              aria-expanded="true"
-              aria-controls="navLinks"
-            >
-              <div
-                id="menuButton"
-                onClick={this.handleOpen}
-                data-toggle={collapseState}
-                data-target="#navLinks"
-                aria-expanded="true"
-                aria-controls="navLinks"
-              >
-                {this.state.isOpen ? (
-                  <FontAwesomeIcon
-                    icon={faTimes}
-                    className="fa-lg NavbarSmall_MenuIcon"
-                  />
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faBars}
-                    className="fa-lg NavbarSmall_MenuIcon"
-                  />
-                )}
-              </div>
-            </div>
-            <ul
-              id="navLinks"
-              className={collapseState}
-              aria-labelledby="menuButton"
-            >
-              <li className="Navbar__Link">
-                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                  Inicio
-                </Link>
-              </li>
-              <li className="Navbar__Link">
-                <Link
-                  to="/comprar"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Comprar
-                </Link>
-              </li>
-              <li className="Navbar__Link">
-                <Link
-                  to="/alquiler"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Alquiler
-                </Link>
-              </li>
-              <li className="Navbar__Link">
-                <Link
-                  to="/vender"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Vender
-                </Link>
-              </li>
-            </ul>
+          <div
+            className="NavbarSmall__MenuButton"
+            onClick={this.handleOpen}
+            data-toggle={collapseState}
+            data-target="#navLinks"
+            aria-expanded="true"
+            aria-controls="navLinks"
+          >
+            {this.state.isOpen ? (
+              <FontAwesomeIcon
+                icon={faTimes}
+                className="fa-lg NavbarSmall_MenuIcon"
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faBars}
+                className="fa-lg NavbarSmall_MenuIcon"
+              />
+            )}
           </div>
+          <ul
+            className={collapseState}
+            aria-labelledby="menuButton"
+            data-parent="#accordionExample"
+          >
+            <li className="NavbarSmall__Link">
+              <Link to="/">Inicio</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/comprar">Comprar</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/alquiler">Alquiler</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/vender">Vender</Link>
+            </li>
+          </ul>
         </nav>
 
         <Route exact path="/" component={Home} />

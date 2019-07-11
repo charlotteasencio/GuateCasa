@@ -18,8 +18,13 @@
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
+
     &:hover {
       cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: white;
     }
   }
   ul {
@@ -53,10 +58,44 @@
     position: sticky;
     top: 0;
     justify-content: space-between;
-    padding: 0 20px;
     z-index: $top;
     ul {
       list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &.collapse {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: $purple;
+        justify-content: center;
+        right: -30%;
+        width: 30%;
+        height: calc(100vh - 10px);
+        z-index: $middle;
+      }
+      &.collapseShow {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: $white;
+        justify-content: center;
+        right: 0;
+        width: 30%;
+        height: calc(100vh - 10px);
+        z-index: $middle;
+      }
+    }
+    .NavbarSmall__MenuButton {
+      color: white;
+      float: right;
+      margin-top: 20px;
+      z-index: $top;
+    }
+    .Navbar__Logo {
+      position: relative;
+      z-index: $top;
     }
   }
 
