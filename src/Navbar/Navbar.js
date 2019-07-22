@@ -5,7 +5,9 @@ import Comprar from "../Comprar";
 import Home from "../Home";
 import Alquiler from "../Alquiler";
 import Vender from "../Vender";
-import { FontAwesomeIcon } from "react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -29,39 +31,64 @@ export default class Navbar extends React.Component {
       <Router>
         <nav className="Navbar">
           <h4 className="Navbar__Logo">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              Guate Casa
-            </Link>
+            <Link to="/">Guate Casa</Link>
           </h4>
-          <ul>
+          <ul className="Navbar__Links">
             <li className="Navbar__Link">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                Inicio
-              </Link>
+              <Link to="/">Inicio</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/comprar"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Comprar
-              </Link>
+              <Link to="/comprar">Comprar</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/alquiler"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Alquiler
-              </Link>
+              <Link to="/alquiler">Alquiler</Link>
             </li>
             <li className="Navbar__Link">
-              <Link
-                to="/vender"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Vender
-              </Link>
+              <Link to="/vender">Vender</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <nav className="NavbarSmall">
+          <h4 className="Navbar__Logo">
+            <Link to="/">Guate Casa</Link>
+          </h4>
+          <div
+            className="NavbarSmall__MenuButton"
+            onClick={this.handleOpen}
+            data-toggle={collapseState}
+            data-target="#navLinks"
+            aria-expanded="true"
+            aria-controls="navLinks"
+          >
+            {this.state.isOpen ? (
+              <FontAwesomeIcon
+                icon={faTimes}
+                className="fa-lg NavbarSmall_MenuIcon"
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faBars}
+                className="fa-lg NavbarSmall_MenuIcon"
+              />
+            )}
+          </div>
+          <ul
+            className={collapseState}
+            aria-labelledby="menuButton"
+            data-parent="#accordionExample"
+          >
+            <li className="NavbarSmall__Link">
+              <Link to="/">Inicio</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/comprar">Comprar</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/alquiler">Alquiler</Link>
+            </li>
+            <li className="NavbarSmall__Link">
+              <Link to="/vender">Vender</Link>
             </li>
           </ul>
         </nav>
