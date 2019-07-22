@@ -8,7 +8,10 @@ export default class Comprar extends React.Component {
     return (
       <div className="comprar">
         <MyMapComponent isMarkerShown />
-        <Sidebar />
+        <Sidebar
+          title="Comprar Casa"
+          info="¿Deaseas encontrar el hogar perfecto? ¡Buscalo aqui!"
+        />
       </div>
     );
   }

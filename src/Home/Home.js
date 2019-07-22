@@ -22,6 +22,7 @@ export default class Home extends React.Component {
             color="rgb(255, 165, 81)"
             homeIcon={homeIconLeft}
             goto="comprar"
+            info="Nostors queremos que encuentras a tu hogar perfecto y aqui la puedes buscar. ¡Bienvenido a Casa!"
           />
           <HomePageCard
             title="Alquila"
@@ -29,6 +30,7 @@ export default class Home extends React.Component {
             color="rgb(255, 165, 81)"
             homeIcon={homeIconCenter}
             goto="alquiler"
+            info="Si necesitas alquiler una casa de cuatro recamaras o un apartamento estudio, aqui lo puedes encontrar."
           />
           <HomePageCard
             title="Venda"
@@ -36,6 +38,7 @@ export default class Home extends React.Component {
             color="rgb(255, 165, 81)"
             homeIcon={homeIconRight}
             goto="vender"
+            info="¿Es hora de mudarse a un hogar nuevo? Puedes postear tu casa en venta aqui."
           />
         </div>
         <Footer />
