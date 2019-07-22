@@ -43,6 +43,10 @@
     &:hover {
       cursor: pointer;
     }
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
   .NavbarMobile_Navlinks {
     display: flex;
