@@ -15,7 +15,7 @@ const MyMapComponent = compose(
       "&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: (
-      <div style={{ height: `calc(100vh - 80px)`, width: `80%` }} />
+      <div style={{ height: `calc(100vh - 80px)`, width: `100%` }} />
     ),
     mapElement: <div style={{ height: `100%` }} />
   }),
