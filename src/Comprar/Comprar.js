@@ -3,7 +3,7 @@ import "./Comprar.scss";
 import Sidebar from "../Sidebar";
 import MyMapComponent from "../Maps";
 import Media from "react-media";
-import SmallSearch from "../ComprarSearch";
+import SmallSearch from "../SmallSearch";
 
 export default class Comprar extends React.Component {
   render() {
