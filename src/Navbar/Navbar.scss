@@ -10,9 +10,6 @@
   justify-content: space-between;
   padding: 0 20px;
   z-index: $top;
-  link {
-    text-decoration: none;
-  }
   .Navbar__Logo {
     font-size: 20px;
     display: flex;
@@ -50,64 +47,57 @@
   }
 }
 
-.NavbarSmall {
-  display: none;
-}
-
-@media only screen and (max-width: 800px) {
-  .NavbarSmall {
+@media only screen and (max-width: 600px) {
+  .Navbar {
     background: $purple;
     color: black;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     position: sticky;
     top: 0;
-    justify-content: space-between;
+    padding: 0;
     z-index: $top;
-    ul {
-      list-style: none;
-      padding: 0;
+    .Navbar__Logo {
+      font-size: 20px;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-right: 10px;
-      margin-top: 10px;
-      &.collapse {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background: $purple;
-        justify-content: center;
-        right: -30%;
-        width: 30%;
-        height: calc(100vh - 10px);
-        z-index: $middle;
+      text-align: center;
+      padding: 20px 0px;
+      &:hover {
+        cursor: pointer;
       }
-      &.collapseShow {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background: $white;
-        justify-content: center;
-        right: 0;
-        width: 30%;
-        height: calc(100vh - 10px);
-        z-index: $middle;
+      a {
+        text-decoration: none;
+        color: white;
       }
     }
-    .NavbarSmall__MenuButton {
-      color: white;
-      float: right;
-      margin-top: 20px;
-      z-index: $top;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .Navbar__Link {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      padding: 20px 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: $lightpurple;
     }
     .Navbar__Logo {
       position: relative;
       z-index: $top;
     }
-  }
-
-  .Navbar {
-    display: none;
   }
 }
