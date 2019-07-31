@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.scss";
 import HomePageCard from "../HomePageCard";
-import Footer from "../Footer";
 import Search from "../Search";
 import homeIconLeft from "../assets/images/tealHomeIcon3.png";
 import homeIconCenter from "../assets/images/tealHomeIcon4.png";
@@ -41,7 +40,6 @@ export default class Home extends React.Component {
             info="¿Es hora de mudarse a un hogar nuevo? Puedes postear tu casa en venta aqui."
           />
         </div>
-        <Footer />
       </div>
     );
   }

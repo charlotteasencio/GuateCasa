@@ -5,6 +5,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 3;
+  position: relative;
+  background: $lightteal;
   .footer__icons {
     margin-right: 40px;
     display: flex;

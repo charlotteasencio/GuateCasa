@@ -2,7 +2,6 @@ import React from "react";
 import "./Comprar.scss";
 import Sidebar from "../Sidebar";
 import MyMapComponent from "../Maps";
-import Media from "react-media";
 import SmallSearch from "../SmallSearch";
 
 export default class Comprar extends React.Component {
@@ -10,18 +9,8 @@ export default class Comprar extends React.Component {
     return (
       <div className="comprar">
         <MyMapComponent isMarkerShown />
-        <Media query="(max-width: 799px)">
-          {matches =>
-            matches ? (
-              <SmallSearch />
-            ) : (
-              <Sidebar
-                title="Comprar Casa"
-                info="¿Deaseas encontrar el hogar perfecto? ¡Buscalo aqui!"
-              />
-            )
-          }
-        </Media>
+        <Sidebar />
+        <SmallSearch />
       </div>
     );
   }
