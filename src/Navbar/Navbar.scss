@@ -3,13 +3,14 @@
 
 .Navbar {
   background: $purple;
+  position: sticky;
   color: black;
   display: flex;
-  /*position: sticky;*/
   top: 0;
   justify-content: space-between;
   padding: 0 20px;
   z-index: $top;
+  box-shadow: 0px 3px 6px $darkgray;
   .Navbar__Logo {
     font-size: 20px;
     display: flex;
@@ -24,12 +25,17 @@
       color: white;
     }
   }
-  ul {
+  .Navbar__Icon {
+    display: none;
+  }
+  .Navbar__LinksMain {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     list-style: none;
     padding-inline-start: 0px;
+    ul {
+      width: 100%;
+    }
   }
   .Navbar__Link {
     font-size: 16px;
@@ -47,57 +53,60 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+.Navbar__LinksMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
   .Navbar {
-    background: $purple;
-    color: black;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    position: sticky;
-    top: 0;
-    padding: 0;
-    z-index: $top;
-    .Navbar__Logo {
-      font-size: 20px;
-      margin: 0;
-      text-align: center;
-      padding: 20px 0px;
-      &:hover {
-        cursor: pointer;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-    ul {
-      list-style: none;
+    .Navbar__Icon {
       display: flex;
-      flex-direction: row;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      justify-content: space-between;
-      a {
-        text-decoration: none;
-        color: white;
-        &:hover {
-          cursor: pointer;
+      color: white;
+    }
+    .Navbar__LinksMain {
+      display: none;
+    }
+  }
+  .Navbar__LinksMobile {
+    &.--open {
+      display: flex;
+      position: sticky;
+      top: 76px;
+      height: calc(100vh);
+      background: white;
+      z-index: $top;
+      left: 0;
+      overflow: hidden;
+      ul {
+        width: 100%;
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+        li {
+          padding: 20px 0px;
+        }
+        a {
+          text-decoration: none;
+          color: $purple;
+          &:hover {
+            color: $darkpurple;
+          }
         }
       }
+      .Navbar__Link {
+        width: 100%;
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $purple;
+      }
     }
-    .Navbar__Link {
-      width: 100%;
-      margin: 0;
-      text-align: center;
-      padding: 20px 0;
-      border-right: 1px solid rgba(255, 255, 255, 0.5);
-      background-color: $lightpurple;
-    }
-    .Navbar__Logo {
-      position: relative;
-      z-index: $top;
+    &.--closed {
+      display: none;
     }
   }
 }
