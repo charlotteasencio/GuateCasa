@@ -1,20 +1,27 @@
 @import "../buttons";
 
-.comprarSearch {
-  display: flex;
-  justify-content: space-between;
+.search {
   width: 100%;
   padding: 10px 0px;
   border-bottom: 1px solid lighten($darkgray, 50%);
-  .comprarSearch__Input {
-    width: 100%;
+
+  .search__Elements {
+    display: flex;
+  }
+  .search__Input {
+    width: 300px;
     margin-left: 10px;
     padding: 10px 15px;
     border: 1px solid #aaa;
     border-radius: 5px;
   }
-  .comprarSearch__button {
+
+  .search__button {
     margin: 0 10px;
     @include btns($burntorange, $white);
+  }
+
+  .search__Dropdown {
+    @include btns($purple, $white);
   }
 }

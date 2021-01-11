@@ -1,3 +1,3 @@
-import SmallSearch from "./SmallSearch";
+import SearchComponent from "./SmallSearch";
 
-export default SmallSearch;
+export default SearchComponent;
