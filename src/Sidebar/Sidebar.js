@@ -9,8 +9,10 @@ export default class Sidebar extends React.Component {
     return (
       <div className="sidebar">
         <SearchComponent />
-        <h2 className="sidebar__Title">{title}</h2>
-        <h3 className="sidebar__Info">{info}</h3>
+        <div className="sidebar__infoCards">
+          <h2 className="sidebar__Title">{title}</h2>
+          <h3 className="sidebar__Info">{info}</h3>
+        </div>
       </div>
     );
   }

@@ -33,14 +33,19 @@
   }
 }
 
-@media only screen and (max-width: $mobile-break) {
-  .sidebar {
+@media only screen and (max-width: $smalltablet_break) {
+  .sidebar__infoCards {
     display: none;
   }
-}
-
-@media only screen and (max-width: $largetablet-break) {
   .sidebar {
-    width: 37%;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background: white;
+    height: fit-content;
+    right: auto;
+    align-items: center;
+    text-align: center;
+    box-shadow: none;
   }
 }

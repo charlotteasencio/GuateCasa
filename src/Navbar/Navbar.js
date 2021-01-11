@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 import Comprar from "../Comprar";
 import Home from "../Home";
 import Alquiler from "../Alquiler";
-import Vender from "../Vender";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import classNames from "classnames";
@@ -26,16 +30,13 @@ export const Navbar = () => {
         </h4>
         <ul className="Navbar__LinksMain">
           <li className="Navbar__Link">
-            <Link to="/">Inicio</Link>
+            <NavLink to="/">Inicio</NavLink>
           </li>
           <li className="Navbar__Link">
-            <Link to="/comprar">Comprar</Link>
+            <NavLink to="/comprar">Comprar</NavLink>
           </li>
           <li className="Navbar__Link">
-            <Link to="/alquiler">Alquiler</Link>
-          </li>
-          <li className="Navbar__Link">
-            <Link to="/vender">Vender</Link>
+            <NavLink to="/alquiler">Alquiler</NavLink>
           </li>
         </ul>
 
@@ -49,16 +50,13 @@ export const Navbar = () => {
       <div className={classNames("Navbar__LinksMobile", menuOpenClass)}>
         <ul>
           <li className="Navbar__Link">
-            <Link to="/">Inicio</Link>
+            <NavLink to="/">Inicio</NavLink>
           </li>
           <li className="Navbar__Link">
-            <Link to="/comprar">Comprar</Link>
+            <NavLink to="/comprar">Comprar</NavLink>
           </li>
           <li className="Navbar__Link">
-            <Link to="/alquiler">Alquiler</Link>
-          </li>
-          <li className="Navbar__Link">
-            <Link to="/vender">Vender</Link>
+            <NavLink to="/alquiler">Alquiler</NavLink>
           </li>
         </ul>
       </div>
@@ -66,7 +64,6 @@ export const Navbar = () => {
       <Route exact path="/" component={Home} />
       <Route path="/comprar" component={Comprar} />
       <Route path="/alquiler" component={Alquiler} />
-      <Route path="/vender" component={Vender} />
     </Router>
   );
 };

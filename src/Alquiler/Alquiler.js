@@ -7,8 +7,8 @@ export default class Alquiler extends React.Component {
   render() {
     return (
       <div className="alquiler">
-        <MyMapComponent />
-        <Sidebar />
+        <MyMapComponent isMarkerShown />
+        <Sidebar title="Casas en Alquiler" />
       </div>
     );
   }

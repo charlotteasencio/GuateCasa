@@ -7,7 +7,7 @@ export default class Vender extends React.Component {
   render() {
     return (
       <div className="alquiler">
-        <MyMapComponent />
+        <MyMapComponent isMarkerShown />
         <Sidebar />
       </div>
     );
