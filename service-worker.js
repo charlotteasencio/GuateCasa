@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/guateCasa/precache-manifest.fa2c4b689f1faac6d0d526ec630487b5.js"
+  "/guateCasa/precache-manifest.031f67c1bf8e0644addb8f5ee0052d93.js"
 );
 
 workbox.clientsClaim();
