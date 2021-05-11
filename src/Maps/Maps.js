@@ -14,7 +14,7 @@ const MapMarker = ({ house }) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${house.address}&key=AIzaSyBrTeH59RbfVojqHr3qQEpqJiqtRZnl-Dw`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${house.address}&key=${process.env.REACT_APP_GOOGLE_API_2}`
     )
       .then(response => response.json())
       .then(data => {
