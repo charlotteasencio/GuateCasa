@@ -5,6 +5,7 @@ import Search from "../Search";
 import homeIconLeft from "../assets/images/tealHomeIcon3.png";
 import homeIconCenter from "../assets/images/tealHomeIcon4.png";
 import homeIconRight from "../assets/images/tealHomeIcon5.png";
+import Footer from "../Footer";
 
 export default class Home extends React.Component {
   render() {
@@ -40,6 +41,7 @@ export default class Home extends React.Component {
             info="¿Es hora de mudarse a un hogar nuevo? Puedes postear tu casa en venta aqui."
           />
         </div>
+        <Footer />
       </div>
     );
   }

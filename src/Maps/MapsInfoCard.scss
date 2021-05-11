@@ -1,0 +1,26 @@
+@import "../colors";
+
+.maps__infoCards {
+  width: 100%;
+  &:not(:last-child) {
+    border-bottom: 1px solid gray;
+  }
+  .maps__infoCardsPrice {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .maps__infoCardsBedBaths {
+    display: flex;
+    justify-content: space-around;
+    .maps__infoCardsBed,
+    .maps__infoCardsBath {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      :first-child {
+        padding-right: 5px;
+        color: $coral;
+      }
+    }
+  }
+}

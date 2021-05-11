@@ -1,19 +1,15 @@
 import React from "react";
-import SearchComponent from "../SmallSearch";
 import "./Sidebar.scss";
+import { SideBarInfoCard } from "./SideBarInfoCards";
 
-export default class Sidebar extends React.Component {
-  render() {
-    const { title, info } = this.props;
+const Sidebar = ({ houses }) => {
+  return (
+    <div className="sidebar">
+      {houses.map(house => {
+        return <SideBarInfoCard key={house.id} house={house} />;
+      })}
+    </div>
+  );
+};
 
-    return (
-      <div className="sidebar">
-        <SearchComponent />
-        <div className="sidebar__infoCards">
-          <h2 className="sidebar__Title">{title}</h2>
-          <h3 className="sidebar__Info">{info}</h3>
-        </div>
-      </div>
-    );
-  }
-}
+export default Sidebar;

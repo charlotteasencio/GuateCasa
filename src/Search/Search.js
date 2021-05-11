@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Search.scss";
 
 const SearchParams = () => {
@@ -6,9 +7,9 @@ const SearchParams = () => {
   //use this instead of setState for function components
   //hooks never go inside of if statements or for loops
   //hooks keep track of the order that you are calling these things in. They can't be called out of order.
-  const [location, setLocation] = useState("");
+  //const [location, setLocation] = useState("");
   //can add another hook here for rent or buy
-  const [searchType, setSearchType] = useState("comprar");
+  const [searchType, setSearchType] = useState("Comprar");
 
   const SearchTypes = ["Comprar", "Alquiler"];
 
@@ -16,12 +17,12 @@ const SearchParams = () => {
     <div>
       <form className="locationSearchForm">
         <div className="locationSearch">
-          <input
+          {/* <input
             className="locationSearch__Input"
             value={location}
             placeholder="Ciudad"
             onChange={e => setLocation(e.target.value)}
-          />
+          /> */}
           <select
             className="locationSearch__Select"
             value={searchType}
@@ -38,7 +39,16 @@ const SearchParams = () => {
             ))}
           </select>
         </div>
-        <button className="locationSearchForm__button">Vamos</button>
+        <Link
+          to={`/${searchType.toLowerCase()}`}
+          style={{
+            textDecoration: "none",
+            color: "white",
+            textAlign: "center"
+          }}
+        >
+          <button className="locationSearchForm__button">Vamos</button>
+        </Link>
       </form>
     </div>
   );

@@ -14,12 +14,37 @@
   align-items: center;
   text-align: center;
   box-shadow: -4px 30px 20px rgba(29, 29, 29, 0.5);
+  overflow: scroll;
 
   .sidebar__Info {
     margin: 10px 30px 40px 10px;
   }
   &.collapsed {
     display: none;
+  }
+  .sidebar__infoCards {
+    width: 100%;
+    &:not(:last-child) {
+      border-bottom: 1px solid gray;
+    }
+    .sidebar__infoCardsPrice {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .sidebar__infoCardsBedBaths {
+      display: flex;
+      justify-content: space-around;
+      .sidebar__infoCardsBed,
+      .sidebar__infoCardsBath {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        :first-child {
+          padding-right: 5px;
+          color: $coral;
+        }
+      }
+    }
   }
 }
 .sidebar__Button {

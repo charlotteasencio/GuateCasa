@@ -1,15 +1,11 @@
 import React from "react";
-import MyMapComponent from "../Maps/Maps";
-import Sidebar from "../Sidebar";
 import "./Vender.scss";
 
-export default class Vender extends React.Component {
-  render() {
-    return (
-      <div className="alquiler">
-        <MyMapComponent isMarkerShown />
-        <Sidebar />
-      </div>
-    );
-  }
-}
+export const Vender = () => {
+  return (
+    <div className="vender">
+      <h1>¡Bajo Construcción!</h1>
+      <h2>disculpe la molestia</h2>
+    </div>
+  );
+};
