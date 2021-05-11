@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/guateCasa/static/js/runtime~main.346e9c91.js"
   },
   {
-    "revision": "4e4b0096916002374d1c",
-    "url": "/guateCasa/static/js/main.01049c1e.chunk.js"
+    "revision": "820a571fd52b8e68b732",
+    "url": "/guateCasa/static/js/main.53744a0f.chunk.js"
   },
   {
-    "revision": "12c997ea9405f051b1b1",
-    "url": "/guateCasa/static/js/2.6dce85e0.chunk.js"
+    "revision": "19b096a778a32aa5e1c8",
+    "url": "/guateCasa/static/js/2.5d510a37.chunk.js"
   },
   {
-    "revision": "4e4b0096916002374d1c",
+    "revision": "820a571fd52b8e68b732",
     "url": "/guateCasa/static/css/main.a4a4cb82.chunk.css"
   },
   {
-    "revision": "e27cfc1ce471259ba4f1d02e03d65b91",
+    "revision": "d022fe2f93801404d5c4621b565a8962",
     "url": "/guateCasa/index.html"
   }
 ];
