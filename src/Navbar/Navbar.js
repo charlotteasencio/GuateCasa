@@ -26,11 +26,11 @@ export const Navbar = () => {
     <Router>
       <nav className="Navbar">
         <h4 className="Navbar__Logo">
-          <Link to="/">Guate Casa</Link>
+          <Link to="/guateCasa">Guate Casa</Link>
         </h4>
         <ul className="Navbar__LinksMain">
           <li className="Navbar__Link">
-            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/guateCasa">Inicio</NavLink>
           </li>
           <li className="Navbar__Link">
             <NavLink to="/comprar">Comprar</NavLink>
@@ -61,7 +61,7 @@ export const Navbar = () => {
         </ul>
       </div>
 
-      <Route exact path="/" component={Home} />
+      <Route exact path="/guateCasa" component={Home} />
       <Route path="/comprar" component={Comprar} />
       <Route path="/alquiler" component={Alquiler} />
     </Router>
